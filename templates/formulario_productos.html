@@ -1,0 +1,200 @@
+<dialog id="modalProductos">
+  <div class="container">
+    <div class="info-container" id="InfoCont">
+      <!-- <div class="container-form"> -->
+      <div id="btn_cancelarProducto" class="btn_cancelar">
+        <i class="bx bx-x"></i>
+      </div>
+      <h5 class="heading"><span>CONTROL PRODUCTOS</span></h5>
+      <br />
+
+      <div class="form-principalDT">
+        <form id="formP" action="/operacionesProductos" method="post" enctype="multipart/form-data">
+          <!-- PAGINA NO 1 DATOS GENERALES -->
+          <div class="pagina movPag">
+            <div class="gridpagina">
+              <input type="hidden" name="idProducto" id="idProducto" value="0" />
+              <input type="hidden" name="sabor" id="sabor" />
+              <input type="hidden" name="relleno" id="relleno" />
+              <input type="hidden" name="categoria" id="categoria" />
+              <input type="hidden" name="imagendef" id="imagendef" />
+
+              <!-- Nombres -->
+              <div class="campo">
+                <div class="label">
+                  Producto <b class="error" id="txtproducto-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><ion-icon name="text-sharp"></ion-icon
+                ></span>
+                <input
+                  type="text"
+                  id="txtproducto"
+                  name="txtproducto"
+                  placeholder="Nombre Producto"
+                />
+              </div>
+
+              <!-- CATEGORIAS -->
+              <div class="campo">
+                <div class="label">
+                  Categoria<b class="error" id="txtcategoria-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><i class="fa fa-angle-double-down" aria-hidden="true"></i
+                ></span>
+                <select name="txtcategoria" id="txtcategoria">
+                  <option value="-1" disabled selected>Elegir</option>
+                  
+                </select>
+              </div>
+              <div class="campo">
+                <div class="label">
+                  Cantidad
+                  <b class="error" id="txtcantidad-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><ion-icon name="text-sharp"></ion-icon
+                ></span>
+                <input
+                  type="number"
+                  name="txtcantidad"
+                  id="txtcantidad"
+                  placeholder="Cantidad"
+                  min="1"
+                  style="margin: 0; border-radius: 0"
+                />
+              </div>
+
+              <!-- Imagen -->
+              <div class="campo">
+                <div class="label">
+                  Imagen <b class="error" id="txtimagen-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><ion-icon name="text-sharp"></ion-icon
+                ></span>
+                <input type="file" id="txtimagen" name="txtimagen" />
+              </div>
+
+              <!-- Precio costo -->
+              <div class="campo">
+                <div class="label">
+                  Precio costo <b class="error" id="txtprecioCosto-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><ion-icon name="text-sharp"></ion-icon
+                ></span>
+                <input
+                  type="number"
+                  name="txtprecioCosto"
+                  id="txtprecioCosto"
+                  placeholder="Precio costo"
+                  min="1"
+                  step="0.01"
+                />
+              </div>
+
+              <!-- ID REBAJA -->
+              <div class="campo">
+                <div class="label">
+                  Rebaja<b class="error" id="txtrebaja-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><i class="fa fa-angle-double-down" aria-hidden="true"></i
+                ></span>
+                <select name="txtrebaja" id="txtrebaja">
+                  <option value="-1" disabled selected>Elegir</option>
+                  
+                </select>
+              </div>
+           
+         
+              <!-- Sabor -->
+              <div class="campo">
+                <div class="label">
+                  Sabor<b class="error" id="txtsabor-error"></b>
+                </div>
+                <span id="icoError2" class="input-icon"
+                  ><i class="fa fa-angle-double-down" aria-hidden="true"></i
+                ></span>
+                <select name="txtsabor" id="txtsabor">
+                  <option value="-1" disabled selected>Elegir</option>
+               
+                </select>
+              </div>
+
+                 <!-- Relleno -->
+                 <div class="campo">
+                  <div class="label">
+                     Relleno<b class="error" id="txtrelleno-error"></b>
+                  </div>
+                  <span id="icoError2" class="input-icon"
+                    ><i class="fa fa-angle-double-down" aria-hidden="true"></i
+                  ></span>
+                  <select name="txtrelleno" id="txtrelleno">
+                    <option value="-1" disabled selected>Elegir</option>
+                    
+                  </select>
+                </div>
+
+            
+            </div>
+            <!-- Descripcion -->
+
+            <div class="btnsgroup">
+              <div>
+                <button
+                  name="accion1"
+                  id="btnAgregarProducto"
+                  value="InsertarProducto"
+                  type="submit"
+                >
+                  Crear Producto
+                </button>
+              </div>
+
+              <div>
+                <button
+                  name="accion1"
+                  id="btnEliminarProducto"
+                  value="EliminarProducto"
+                  type="submit"
+                >
+                  Eliminar Producto
+                </button>
+              </div>
+
+              <div>
+                <button
+                  name="accion1"
+                  id="btnModificarProducto"
+                  value="ModificarProducto"
+                  type="submit"
+                >
+                  Modificar Producto
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- imagen -->
+    <div class="image-container">
+      <div class="logo">
+        <div class="nombre-empresa">
+          <h3 style="letter-spacing: 4px; font-size: 24px">SAESVIN</h3>
+        </div>
+      </div>
+      <br /><br />
+      <div class="image2">
+        <img
+          src="{{url_for('static', filename='img/fondoform1.svg')}}"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</dialog>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%include 'cabecera.html'%}
+  <body>
+    {%include 'menu.html' %}
+    <main class="contenedor1">
+      <div class="cuerpo">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Generales</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Rebajas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-cake bx-tada bx-flip-horizontal"></i>
+
+            <div class="">
+              <button
+                class="btn"
+                type="button"
+                id="AbrirModalProductos"
+                class="ventanaP"
+              >
+                Agregar Rebaja
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    {% include 'pie.html' %}
+  </body>
+</html>

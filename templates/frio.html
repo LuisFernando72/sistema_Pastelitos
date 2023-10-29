@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%include 'cabecera.html'%}
+  <body>
+    {%include 'menu.html' %}
+    {%include 'carrito_compra.html' %}
+    <main class="contenedor1">
+      <div class="cuerpo">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Pasteles</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Frios</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="featured0" id="featured">
+            <h1 class="heading"><span>Pasteles frios</span></h1>
+    
+            <div class="swiper featured-slider">
+              <div class="swiper-wrapper">
+                {% for v1 in ver.frio %}
+    
+                <div class="swiper-slide box">
+                  <div class="icons">
+                    <a href="#"> <i class="bx bxs-happy-heart-eyes bx-tada"></i></a>
+                    <a href="#"> <i class="bx bxs-cloud-download"></i></a>
+                    <a href="#"><i class="bx bxs-share-alt bx-tada"></i></a>
+                  </div>
+                  <div class="image">
+                    <img src="static/imgp/{{v1.imagen}}" alt="" />
+                  </div>
+                  <div class="content">
+                    <div class="precio" style="font-size: 1.2rem">
+                      Q. {{v1.precio}}
+                    </div>
+                    <div class="price">{{v1.producto}}</div>
+                    <div class=""><p>{{v1.descripcion}}</p></div>
+                    <!-- <a href="#" class="btn">Agregar</a> -->
+                    <button id="btncarritoA" class="btn" value="{{v1.id}}">Agregar</button>
+                  </div>
+                </div>
+                {%endfor%}
+              </div>
+    
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </section>
+    
+
+      
+
+    
+      </div>
+    </main>
+
+    {% include 'pie.html' %}
+  </body>
+</html>

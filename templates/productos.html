@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%include 'cabecera.html'%}
+  <body>
+    {%include 'menu.html' %}
+    <main class="contenedor1">
+      <div class="cuerpo">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Generales</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Productos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-cake bx-tada bx-flip-horizontal"></i>
+
+            <div class="">
+              <button
+                class="btn"
+                type="button"
+                id="AbrirModalProductos"
+                class="ventanaP"
+              >
+                Agregar Productos
+              </button>
+            </div>
+          </li>
+        </ul>
+
+        {% include 'formulario_productos.html' %}
+
+        <div class="table1">
+          <table id="tblproductos" class="display" style="width: 100%">
+            <thead style="width: 100%">
+              <tr>
+                <th>id</th>
+                <th>idcategoria</th>
+                <th>idrebaja</th>
+                <th>#</th>
+                <th>Producto</th>
+                <th>Categoria</th>
+                <th>Descripcion Producto</th>
+                <th>Imagen</th>
+                <th>Precio Costo</th>
+                <th>Precio</th>
+                <th>Nombre rebaja</th>
+                <th>Rebaja</th>
+                <th>Cantidad</th>
+                <th>Fecha inicio rebaja</th>
+                <th>idsabor</th>
+                <th>idrelleno</th>
+                <th>Imagen</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              {% for t in tabla %}
+              <tr>
+                <td>{{t["id"]}}</td>
+                <td>{{t["idCategoria"]}}</td>
+                <td>{{t["idRebajas"]}}</td>
+                <td>{{loop.index }}</td>
+                <td>{{t["nombreProducto"]}}</td>
+                <td>{{t["categoria"]}}</td>
+                <td>{{t["descripcion"]}}</td>
+                <td>{{t["nombreImagen"]}} </td>
+                <td>{{t["precioCosto"]}}</td>
+                <td>{{t["precioVenta"]}}</td>
+                <td>{{t["nombre_rebaja"]}}</td>
+                <td>{{t["porcentaje_rebaja"]}}</td>
+                <td>{{t["cantidad"]}}</td>
+                <td>{{t["fecha_inicio_rebaja"]}}</td>
+                <td>{{t["id_sabor"]}}</td>
+                <td>{{t["id_relleno"]}}</td>
+                <td><div class="rowimg"><img src="{{ url_for('static', filename = 'imgp/'+t.nombreImagen) }}" alt=""></div> </td>
+
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    {% include 'pie.html' %}
+  </body>
+</html>

@@ -1,0 +1,502 @@
+/*18122022*/
+#modalProductos {
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    border-radius: 15px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 100% auto;
+    min-height: 31rem;
+    max-height: 31rem;
+    margin: 4% 4%;
+    justify-content: center;
+    background: linear-gradient(210deg, rgba(253, 255, 255, 1) 30%, rgb(182, 255, 240) 50%, rgb(61, 219, 174) 100%);
+    border-radius: 8px;
+}
+.cuerpo{
+    margin: 3rem;
+}
+ 
+.info-container {
+    width: 75%;
+    text-align: center;
+    padding: 20px 22px 0 22px !important;
+    box-sizing: border-box;
+
+}
+
+ .image-container {
+    display: flex;
+    width: 25%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 1px solid var(--border-color);
+}
+
+.info-container header {
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    padding: 5px;
+    word-spacing: 15px;
+    background-color: black;
+    margin: 0 50px 10px 50px;
+}
+
+.btn_cancelar {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    padding: 14px;
+    line-height: 12px;
+    border-radius: 10px;
+    margin-top: -10px;
+    border: none;
+    font-weight: 600;
+    left: 96%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.btn_cancelar .ex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--uno);
+    font-size: 28px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+    outline: none;
+}
+
+input[type=file] {
+    border: none !important;
+    width: 100%;
+    font-size: 11px !important;
+}
+
+input[type=file]::file-selector-button {
+    background-image: linear-gradient(to right, #FFAB1B 0%, #5c4e00 48%, #FFAB1B 100%);
+    padding: 10px 10px;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+textarea {
+    width: 100%;
+    height: calc(100% + 15px);
+    border: 0;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 5px;
+    margin: 0 5px;
+    border: 1px solid var(--border-color);
+    resize: none;
+}
+
+
+
+/* ESTATURA SELECT */
+.selectNumber select {
+    width: 35px !important;
+    font-size: 8px;
+    border-left: 0 !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.info-container .form-principalDT {
+    min-height: auto;
+    overflow: hidden;
+}
+
+.form-principalDT form {
+    display: flex;
+    width: 600%;
+}
+
+.form-principalDT form .pagina {
+    position: relative;
+    width: 16.67%;
+    transition: margin-left 0.2s ease-in-out;
+}
+
+.form-principalDT form .pagina .gridpagina {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+.form-principalDT form .pagina .grid3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.form-principalDT form .pagina .grid3 .bloc3 {
+    grid-column: 1 / 4;
+}
+
+.form-principalDT form .pagina .gridpagina .bloc3 {
+    position: relative;
+    grid-column: 1 / 3;
+
+}
+
+
+.form-principalDT form .pagina .campo {
+    position: relative;
+    /* width: 80%; */
+    display: flex;
+    flex-direction: row;
+    height: 38px;
+    margin: 18px 10px;
+}
+
+
+.form-principalDT form .pagina .campo .label {
+    position: absolute;
+    top: -22px;
+    padding-left: 8px;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: justify;
+    float: left;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.error {
+    position: absolute;
+    top: 60px;
+    font-size: 11px;
+    color: var(--error-color);
+    font-style: italic;
+    display: block;
+}
+
+.form-principalDT form .pagina .campo input {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+}
+
+.form-principalDT form .pagina .campo .input-icon {
+    position: relative;
+    width: 40px;
+    font-size: 13px;
+    padding: 0 8px 0 8px;
+    background: var(--icon-color);
+    color: var(--panel-color);
+    border: 1px solid var(--icon-color);
+    border-right: 0;
+    line-height: 35px;
+    border-radius: 7px 0 0 7px;
+}
+
+.invalid-background-ico {
+    display: block;
+    background-color: var(--error-color) !important;
+    border-color: var(--error-color) !important;
+    /* box-shadow: 0 3px 2px 0 rgb(129, 1, 1); */
+}
+
+.form-principalDT form .pagina .campo input:hover {
+    border-color: var(--icon-color);
+
+}
+
+.form-principalDT form .pagina .campo select {
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+
+}
+
+.ventanaP {
+    background-image: linear-gradient(to right, #53e7c7 0%, #04ae7b 51%, #018f70 100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 3px 6px #000000;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.ventanaP:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btnsgroup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ 
+}
+
+.form-principalDT form .pagina  button {
+    height: 45px;
+    background: linear-gradient(90deg, #77b3fd 0%, #0651ff 46%, #a4d1ff 100%);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 4px solid #026eb6;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    font-size: 14px;
+    text-align: left;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    text-align: center;
+    margin: 18px 30px;
+    color: white;
+    padding: 5px 35px;
+}
+
+
+.form-principalDT form .pagina  button::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 25px solid #026eb6;
+    border-bottom: 20px solid #026eb6;
+    border-left: 30px solid transparent;
+    border-right: 40px solid #026eb6;
+    position: absolute;
+    opacity: 0.6;
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+
+button:disabled,
+button[disabled] {
+    border: none !important;
+    background: #989898 !important;
+    color: var(--panel-color) !important;
+}
+
+
+
+/* ESTILOS MENSAJES DE ERROR */
+
+.error {
+    color: var(--error-color);
+    float: right;
+    text-align: right;
+}
+
+/* PAGINA HISTORIAL CLINICO PREGUNTAS */
+
+input[type="radio"] {
+    display: none;
+}
+
+
+
+.ocultar {
+    display: none;
+}
+
+.border-colorIcon {
+    background-color: var(--icon-color);
+    border-color: var(--icon-color);
+    box-shadow: none;
+}
+
+.image-container .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.image-container .logo img {
+    width: 120px;
+}
+
+.image-container .logo .nombre-empresa {
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+.image-container .image2 {
+    display: flex;
+    background-size: contain;
+}
+
+.image-container .image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#modalCliente,
+#modalProducto {
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    border-radius: 15px;
+}
+
+/* FINAL LOGO GYM */
+
+/* MEDIAQUERIES */
+
+/* @media (min-width: 992px) and (max-width: 1199px) {
+} */
+
+/* IPAD TABLET */
+@media (min-width: 720px) and (max-width: 991px) {
+    .info-container {
+        width: 85%;
+        /* height: 100%; */
+    }
+
+    .image-container {
+        display: none !important;
+    }
+
+    .form-principalDT form .pagina .campo .label {
+        font-size: 15px;
+    }
+
+
+}
+
+@media (max-width: 710px) {
+    .container {
+        margin: 25px 5px 5px 5px;
+        padding: 0;
+    }
+
+    .info-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-container {
+        display: none !important;
+    }
+
+    .btn_cancelar {
+        font-weight: 600;
+        left: 94%;
+    }
+
+
+    .info-container header {
+        font-size: 20px;
+    }
+
+
+}
+
+@media (max-width: 415px) {
+
+    .image-container {
+        display: none !important;
+    }
+
+    .btn_cancelar {
+        font-weight: 600;
+        left: 94%;
+    }
+
+    .error {
+        font-size: 8.2px;
+        line-height: 12px;
+    }
+
+    .image-container,
+    .info-container {
+        border-radius: 0;
+    }
+
+
+
+    .form-principalDT form .pagina .campo .input-icon {
+        display: none;
+    }
+
+    .form-principalDT form .pagina .campo input {
+        border-radius: 4px;
+    }
+
+
+}

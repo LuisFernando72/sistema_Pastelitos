@@ -1,0 +1,169 @@
+ 
+.responsivecarrito {
+    width: 100%;
+
+}
+
+.responsivecarrito .table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.responsivecarrito .table th,
+.responsivecarrito .table td {
+    padding: 5px 5px;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+.responsivecarrito .table thead tr th {
+    border: 0;
+    position: sticky;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid rgb(210, 210, 210);
+    
+}
+
+.responsivecarrito .table td{
+    border: 1px solid rgb(210, 210, 210);
+    max-width: 200px;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.btnEliminar2{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+
+}
+
+small {
+    font-size: 0.5em;
+}
+
+li {
+    border-radius: 3px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    /* border-bottom: 1px solid black; */
+}
+
+.table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    width: 100%;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.col-1 {
+    flex-basis: 10%;
+}
+
+.col-2 {
+    flex-basis: 40%;
+}
+
+.col-3 {
+    flex-basis: 10%;
+
+}
+
+.col-4 {
+    flex-basis: 10%;
+}
+
+.col-4 {
+    flex-basis: 40%;
+}
+
+.btneliminarcarrito {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+}
+
+.btneliminarcarrito:hover {
+    font-weight: bold;
+}
+
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin: 10px;
+}
+.total label{
+    padding: 5px;
+}
+.total input {
+    border-radius: 5px;
+    border: 1px solid var(--uno);
+    padding: 5px;
+}
+.imgcarritoform{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.imgcarritoform img{
+    width: 11rem;
+    height:10rem;
+    
+}
+
+@media all and (max-width: 767px) {
+    .table-header {
+        display: none;
+    }
+
+
+
+    li {
+        display: block;
+    }
+
+    .col {
+
+        flex-basis: 100%;
+
+    }
+
+    .col {
+        display: flex;
+        padding: 10px 0;
+
+        /* &:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            } */
+    }
+}

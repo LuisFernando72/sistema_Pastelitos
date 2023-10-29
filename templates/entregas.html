@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%include 'cabecera.html'%}
+  <body>
+    {%include 'menu.html' %}
+    <main class="contenedor1">
+      <div class="cuerpo">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Generales</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Entregas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-cake bx-tada bx-flip-horizontal"></i>
+          </li>
+        </ul>
+
+        <div class="table5">
+          <table id="tblEntregas" class="display" style="width: 100%">
+            <thead style="width: 100%">
+              <tr>
+                <th>#</th>
+                <th>No documento</th>
+                <th>Documento</th>
+                <th>FechaPedido</th>
+                <th>Estado Pedido</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for t in tabla %}
+              <tr>
+                <td>{{loop.index }}</td>
+                <td>{{t["NODOCUMENTO"]}}</td>
+                <td>{{t["NOMBRE_DOCUMENTO"]}}</td>
+                <td>{{t["FECHAPEDIDO"]}}</td>
+                <td>{{t["ESTADOPEDIDO"]}}</td>
+                <td>{{t["NOMBRES"]}}</td>
+                <td>{{t["APELLIDOS"]}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $("#tblEntregas").DataTable({
+          language: {
+            url: "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json",
+          },
+          scrollY: true,
+          scrollX: true,
+        });
+      });
+    </script>
+
+    {% include 'pie.html' %}
+  </body>
+</html>

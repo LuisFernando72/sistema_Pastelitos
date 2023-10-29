@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%include 'cabecera.html'%}
+  <body>
+    {%include 'menu.html' %}
+    {%include 'carrito_compra.html' %}
+
+    <main class="contenedor1">
+      <div class="cuerpo">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Generales</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Clientes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-cake bx-tada bx-flip-horizontal"></i>
+          </li>
+        </ul>
+
+        <div class="table2">
+          <table id="tblClientes" class="display" style="width: 100%">
+            <thead style="width: 100%">
+              <tr>
+                <th>id</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Nit</th>
+                <th>Correo</th>
+                <th>Tipo Cliente</th>
+                <th>Fecha ingreso</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for t in tabla %}
+              <tr>
+                <td>{{t["idcliente"]}}</td>
+                <td>{{t["nombres"]}}</td>
+                <td>{{t["apellidos"]}}</td>
+                <td>{{t["nit"]}}</td>
+                <td>{{t["correo"]}}</td>
+                <td>{{t["tipocliente"]}}</td>
+                <td>{{t["fechaingreso"]}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    {% include 'pie.html' %}
+  </body>
+</html>
